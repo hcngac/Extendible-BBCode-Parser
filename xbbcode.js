@@ -95,11 +95,12 @@ var XBBCODE = (function () {
     tags = {
         "youtube": {
             openTag: function (params, content) {
-                return '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + params.substr(1) + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>';
+                return '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + params.substr(1) + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
             },
             closeTag: function (params, content) {
-                return '</iframe>';
-            }
+                return '';
+            },
+            displayContent: false
         },
         "p": {
             openTag: function (params, content) {
